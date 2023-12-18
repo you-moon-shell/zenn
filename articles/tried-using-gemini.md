@@ -48,7 +48,7 @@ export GOOGLE_API_KEY=<your_api_key>
 
 以下のコードを実行してみます！
 
-https://github.com/you-moon-shell/zenn/blob/5cc9ae48076b05ba348b561035df334b0384efdc/files/tried-using-gemini/operation_confirmation.py
+https://github.com/you-moon-shell/zenn/blob/e2a6cd5413854943d87847e3c5cc212d5360de20/files/tried-using-gemini/operation_confirmation.py
 
 こんな感じの結果が返ってくれば動作確認完了です。
 
@@ -64,6 +64,22 @@ Ultimately, the meaning of life is a personal and subjective quest that each ind
 
 # いろいろ試してみる
 
+この辺りを参考に Gemini でできることをいくつか試してみようと思います！
+
 https://ai.google.dev/docs/multimodal_concepts
 
 https://developers.googleblog.com/2023/12/how-its-made-gemini-multimodal-prompting.html
+
+## 画像だけ与えて推論してもらう
+
+おいしそうな朝食の画像を与えて、アウトプットを見てみます。
+
+![](/images/tried-using-gemini/breakfast.jpg)
+
+コードはこちらです。
+
+
+
+```:result
+A delicious breakfast of eggs, bacon, toast, and salad.
+```
