@@ -12,7 +12,7 @@ publication_name: open8
 # 動機
 
 弊社では動画編集クラウドと銘打って[VideoBrain](https://video-b.com/)というサービスを展開しています。
-動画を中心に扱っているサービスなので、マルチモーダルに強みのある(らしい) Gemini はチェックしておこうと思いました。
+動画編集を中心に扱っているサービスなので、マルチモーダルに強みのある(らしい) Gemini はチェックしておこうと思いました。
 Google が公開した Gemini の紹介動画が以下になります。(結構編集の力を借りているようですが、、、)
 
 https://youtu.be/UIZAiXYceBI
@@ -50,7 +50,7 @@ export GOOGLE_API_KEY=<your_api_key>
 
 https://github.com/you-moon-shell/zenn/blob/e2a6cd5413854943d87847e3c5cc212d5360de20/files/tried-using-gemini/operation_confirmation.py
 
-こんな感じの結果が返ってくれば動作確認完了です。
+こんな感じの結果が返ってくれば動作確認完了です 👌
 
 ```
 The meaning of life is a multifaceted concept that has been pondered by philosophers, theologians, and individuals throughout history. While there is no definitive or universally agreed-upon answer, here are some commonly discussed perspectives on the meaning of life:
@@ -72,14 +72,34 @@ https://developers.googleblog.com/2023/12/how-its-made-gemini-multimodal-prompti
 
 ## 画像だけ与えて推論してもらう
 
-おいしそうな朝食の画像を与えて、アウトプットを見てみます。
+試しにおいしそうな朝食の画像を与えて、アウトプットを見てみます。
 
 ![](/images/tried-using-gemini/breakfast.jpg)
 
 コードはこちらです。
+画像を入力したいのでモデルは `gemini-pro-vision` を指定します。([Generate text from image and text inputs](https://ai.google.dev/tutorials/python_quickstart#generate_text_from_image_and_text_inputs))
 
-
+https://github.com/you-moon-shell/zenn/blob/e691f5aed726c9d12a45f76f70490eb1ef7204f5/files/tried-using-gemini/image_input.py
 
 ```:result
 A delicious breakfast of eggs, bacon, toast, and salad.
+```
+
+しっかりとおいしい朝食として認識してくれているようですが、ベーコンの下にあるビーフパティには気付いてくれませんでした。
+
+## テキストも一緒に与えて出力をより詳しくする
+
+先ほどの朝食の画像と一緒にテキストを与えて、詳細なアウトプットを得られるか見てみます。
+それぞれの食材の栄養価を表形式で出力してみようと思います。
+
+```:result
+| Food Item | Calories | Protein (g) | Carbohydrates (g) | Fat (g) |
+|---|---|---|---|---|
+| Egg | 71 | 6.3 | 0.6 | 4.9 |
+| Bacon | 43 | 3.6 | 0 | 3.4 |
+| Toast (2 slices) | 142 | 5.2 | 25.5 | 2.3 |
+| Salad | 20 | 1.5 | 3.9 | 0.7 |
+| Dressing | 50 | 0 | 4 | 5 |
+
+| Total | 326 | 16.6 | 34 | 16.3 |
 ```
