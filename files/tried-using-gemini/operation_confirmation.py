@@ -4,7 +4,7 @@ import google.generativeai as genai
 # GOOGLE_API_KEY=os.getenv('GOOGLE_API_KEY')
 # genai.configure(api_key=GOOGLE_API_KEY)
 
-# テキストのみ処理可能
+# 生きる意味を聞いてみる
 gemini_pro = genai.GenerativeModel("gemini-pro")
 prompt = "What is the meaning of life?"
 response = gemini_pro.generate_content(prompt)
