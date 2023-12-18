@@ -92,6 +92,8 @@ A delicious breakfast of eggs, bacon, toast, and salad.
 先ほどの朝食の画像と一緒にテキストを与えて、詳細なアウトプットを得られるか見てみます。
 それぞれの食材の栄養価を表形式で出力してみようと思います。
 
+https://github.com/you-moon-shell/zenn/blob/b49fd654b23bbcbef739eaa46151b44aba26b9f4/files/tried-using-gemini/image_and_text_input.py
+
 ```:result
 | Food Item | Calories | Protein (g) | Carbohydrates (g) | Fat (g) |
 |---|---|---|---|---|
@@ -103,3 +105,6 @@ A delicious breakfast of eggs, bacon, toast, and salad.
 
 | Total | 326 | 16.6 | 34 | 16.3 |
 ```
+
+ちゃんと栄養価の出力を表で得られました！
+ざっくり調べてみたところ栄養価の数値としては、そこまで実際と乖離がないように見えました。(卵、ベーコン、トーストは結構正しそうでした。)
