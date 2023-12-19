@@ -75,6 +75,7 @@ https://developers.googleblog.com/2023/12/how-its-made-gemini-multimodal-prompti
 試しにおいしそうな朝食の画像を与えて、アウトプットを見てみます。
 
 ![](/images/tried-using-gemini/breakfast.jpg)
+_鎌倉で食べた美味しい朝食_
 
 コードはこちらです。
 画像を入力したいのでモデルは `gemini-pro-vision` を指定します。([Generate text from image and text inputs](https://ai.google.dev/tutorials/python_quickstart#generate_text_from_image_and_text_inputs))
@@ -90,7 +91,7 @@ A delicious breakfast of eggs, bacon, toast, and salad.
 ## テキストも一緒に与えて出力をより詳しくする
 
 先ほどの朝食の画像と一緒にテキストを与えて、詳細なアウトプットを得られるか見てみます。
-それぞれの食材の栄養価を表形式で出力してみようと思います。
+それぞれの食べ物の栄養価を表形式で出力してみようと思います。
 
 https://github.com/you-moon-shell/zenn/blob/b49fd654b23bbcbef739eaa46151b44aba26b9f4/files/tried-using-gemini/image_and_text_input.py
 
@@ -106,5 +107,37 @@ https://github.com/you-moon-shell/zenn/blob/b49fd654b23bbcbef739eaa46151b44aba26
 | Total | 326 | 16.6 | 34 | 16.3 |
 ```
 
-ちゃんと栄養価の出力を表で得られました！
-ざっくり調べてみたところ栄養価の数値としては、そこまで実際と乖離がないように見えました。(卵、ベーコン、トーストは結構正しそうでした。)
+ちゃんと栄養価の出力を表形式で得られました！
+ざっくり調べてみたところ栄養価の数値としては、実際とそこまで乖離がないように見えました。(卵、トーストはほぼ完璧でした。)
+
+## 画像を複数与えて共通点を判断してもらう
+
+以下の 2 枚の画像を与えて、それぞれの説明と共通点があるか出力してもらおうと思います。
+
+![](/images/tried-using-gemini/sensoji.jpg =400x)
+_浅草寺(夜)_
+
+![](/images/tried-using-gemini/skytree.jpg =400x)
+_スカイツリー(夜)_
+
+コードはこちらです。
+
+```:result
+The two images are both night scenes of Tokyo, Japan.
+The first image is of the Sensoji Temple, a Buddhist temple located in Asakusa.
+The second image is of the Tokyo Skytree, a communications and observation tower located in Sumida.
+Both images feature tall structures that are illuminated at night.
+The Sensoji Temple is a five-story pagoda, while the Tokyo Skytree is a 634-meter-tall tower.
+Both images also feature people walking around the structures.
+The Sensoji Temple is located in a busy shopping area, while the Tokyo Skytree is located in a more modern area. Both images capture the beauty of Tokyo at night.
+
+The common features of the two images are:
+
+1. Both images are night scenes of Tokyo, Japan.
+2. Both images feature tall structures that are illuminated at night.
+3. Both images feature people walking around the structures.
+4. Both images capture the beauty of Tokyo at night.
+```
+
+浅草寺とスカイツリーそれぞれ判別できており、ある程度正しく説明できています。
+共通点も 4 つ挙げられ 3 つ目以外は正しい結果となりました！
