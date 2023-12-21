@@ -122,6 +122,8 @@ _スカイツリー(夜)_
 
 コードはこちらです。
 
+https://github.com/you-moon-shell/zenn/blob/3bdfe099b3919a37e87722c35540808b5dfb5218/files/tried-using-gemini/multi_images_and_text_input.py
+
 ```:result
 The two images are both night scenes of Tokyo, Japan.
 The first image is of the Sensoji Temple, a Buddhist temple located in Asakusa.
@@ -139,5 +141,31 @@ The common features of the two images are:
 4. Both images capture the beauty of Tokyo at night.
 ```
 
+```:result(和訳)
+この2つの画像はどちらも東京の夜景である。
+1枚目は浅草にある浅草寺。
+2つ目の画像は、墨田区にある通信・展望タワー、東京スカイツリー。
+どちらの画像も、夜になるとライトアップされる高い建造物が特徴だ。
+浅草寺は五重塔で、東京スカイツリーは高さ634メートルのタワーである。
+どちらの画像も、建造物の周りを歩く人々も写っている。
+浅草寺は繁華街にあり、東京スカイツリーはもっと近代的なエリアにある。
+どちらの画像も夜の東京の美しさをとらえている。
+
+2つの画像に共通する特徴は
+
+1. どちらも東京の夜景である。
+2. どちらの画像も、夜にライトアップされた高い建造物が特徴である。
+3. どちらの画像にも、建造物の周りを歩く人々が写っている。
+4. どちらの画像も夜の東京の美しさをとらえている。
+```
+
 浅草寺とスカイツリーそれぞれ判別できており、ある程度正しく説明できています。
 共通点も 4 つ挙げられ 3 つ目以外は正しい結果となりました！
+
+## 与えた画像・説明に合わせて別の画像に説明を付与する
+
+執筆途中
+
+## 他検証
+
+# まとめ
