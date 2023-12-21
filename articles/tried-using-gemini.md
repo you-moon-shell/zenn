@@ -162,9 +162,18 @@ The common features of the two images are:
 浅草寺とスカイツリーそれぞれ判別できており、ある程度正しく説明できています。
 共通点も 4 つ挙げられ 3 つ目以外は正しい結果となりました！
 
-## 与えた画像・説明に合わせて別の画像に説明を付与する
+## 与えた画像・説明に合わせて別の画像に説明を付与する(途中...)
 
-執筆途中
+![](/images/tried-using-gemini/tokyotower.jpg =400x)
+_東京タワー(夜)_
+
+コードはこちらです。
+
+https://github.com/you-moon-shell/zenn/blob/88595e69fd187654c90b3cb3396e8460b5072188/files/tried-using-gemini/image_and_text_pair_input.py
+
+```:result
+東京タワー：東京/港区 (1958年)
+```
 
 ## 他検証
 

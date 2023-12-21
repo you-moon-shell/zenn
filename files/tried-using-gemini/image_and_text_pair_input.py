@@ -7,12 +7,11 @@ gemini_pro_vision = genai.GenerativeModel(
 )
 response = gemini_pro_vision.generate_content(
     [
-        "Determine the city along with the landmark.",
         Image.open("images/tried-using-gemini/sensoji.jpg"),
         "浅草寺：東京/台東区 (623年)",
         Image.open("images/tried-using-gemini/skytree.jpg"),
         "スカイツリー：東京/墨田区 (2012年)",
         Image.open("images/tried-using-gemini/tokyotower.jpg"),
-    ]  # 配列に 指示->画像->説明->画像->説明->画像 の順に渡す
+    ]  # 配列に 画像->説明->画像->説明->画像 の順に渡す
 )
 print(response.text)
