@@ -169,12 +169,12 @@ _東京タワー(夜)_
 
 コードはこちらです。
 
-https://github.com/you-moon-shell/zenn/blob/88595e69fd187654c90b3cb3396e8460b5072188/files/tried-using-gemini/image_and_text_pair_input.py
+https://github.com/you-moon-shell/zenn/blob/3a6e1252b61c154ce88d8c4d27a7891d1de36f3e/files/tried-using-gemini/image_and_text_pair_input.py
 
 ```:result
 東京タワー：東京/港区 (1958年)
 ```
 
-## 他検証
+## 他検証あれば追加！
 
 # まとめ
