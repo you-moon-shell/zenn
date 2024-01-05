@@ -70,7 +70,7 @@ https://ai.google.dev/docs/multimodal_concepts
 
 https://developers.googleblog.com/2023/12/how-its-made-gemini-multimodal-prompting.html
 
-## 画像だけ与えて推論してもらう
+## 1. 画像だけ与えて推論してもらう
 
 試しにおいしそうな朝食の画像を与えて、アウトプットを見てみます。
 
@@ -88,7 +88,7 @@ A delicious breakfast of eggs, bacon, toast, and salad.
 
 しっかりとおいしい朝食として認識してくれているようですが、ベーコンの下にあるビーフパティには気付いてくれませんでした。
 
-## テキストも一緒に与えて出力をより詳しくする
+## 2. テキストも一緒に与えて出力をより詳しくする
 
 先ほどの朝食の画像と一緒にテキストを与えて、詳細なアウトプットを得られるか見てみます。
 それぞれの食べ物の栄養価を表形式で出力してみようと思います。
@@ -110,7 +110,7 @@ https://github.com/you-moon-shell/zenn/blob/b49fd654b23bbcbef739eaa46151b44aba26
 ちゃんと栄養価の出力を表形式で得られました！
 ざっくり調べてみたところ栄養価の数値としては、実際とそこまで乖離がないように見えました。(卵、トーストはほぼ完璧でした。)
 
-## 画像を複数与えて共通点を判断してもらう
+## 3. 画像を複数与えて共通点を判断してもらう
 
 以下の 2 枚の画像を与えて、それぞれの説明と共通点があるか出力してもらおうと思います。
 
@@ -162,19 +162,24 @@ The common features of the two images are:
 浅草寺とスカイツリーそれぞれ判別できており、ある程度正しく説明できています。
 共通点も 4 つ挙げられ 3 つ目以外は正しい結果となりました！
 
-## 与えた画像・説明に合わせて別の画像に説明を付与する(途中...)
+## 4. 与えた画像・説明に合わせて別の画像に説明を付与する
+
+浅草寺とスカイツリーの説明を「名称：所在地 (竣工年)」といった形で与え、以下の画像の説明を出力できるか見てみようと思います。
 
 ![](/images/tried-using-gemini/tokyotower.jpg =400x)
 _東京タワー(夜)_
 
 コードはこちらです。
 
-https://github.com/you-moon-shell/zenn/blob/3a6e1252b61c154ce88d8c4d27a7891d1de36f3e/files/tried-using-gemini/image_and_text_pair_input.py
+https://github.com/you-moon-shell/zenn/blob/5409e5fbaaf71b8c4f64d15bf09b4be143a34b66/files/tried-using-gemini/image_and_text_pair_input.py
 
 ```:result
 東京タワー：東京/港区 (1958年)
 ```
 
-## 他検証あれば追加！
+フォーマットも内容も正しい結果となりました！
 
 # まとめ
+
+4 つのケースで現状の Gemini の精度やできることを見てみて、細かい点を見落としたり一部誤った出力となる場合もありましたが、わかりやすい画像や指示でシンプルな出力を求めれば活用できる場面は見出せるように思いました。
+今後動画を入力できたり精度や速度の向上が行われると期待しているので、逐次チェックしていきたいです！
