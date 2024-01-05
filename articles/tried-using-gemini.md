@@ -3,7 +3,7 @@ title: "Gemini API 触ってみる"
 emoji: "😇"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Gemini", "Google", "Python", "GenerativeAI", "Multimodal"]
-published: false
+published: true
 publication_name: open8
 ---
 
